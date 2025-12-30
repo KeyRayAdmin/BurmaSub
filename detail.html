@@ -1,26 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Movie Detail</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inception — StreamHub</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="header">
+    <a href="index.html" class="back-link">&larr; Back</a>
+    <h1>Movie Details</h1>
+  </header>
 
-<a href="index.html" class="back">← Back</a>
+  <main class="detail-content">
+    <div class="poster">
+      <img src="https://via.placeholder.com/300x450/1e293b/94a3b8?text=Inception" alt="Inception Poster" />
+    </div>
 
-<div id="detail"></div>
+    <div class="info">
+      <h2>Inception</h2>
+      <p class="meta">2010 • Sci-Fi • 2h 28m</p>
+      <p class="description">
+        A thief who steals corporate secrets through dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.
+      </p>
 
-<script>
-const data = JSON.parse(localStorage.getItem("currentItem"));
+      <!-- 🔽 Download Button -->
+      <a href="#download" class="btn-download">⬇️ Download Movie</a>
+    </div>
+  </main>
 
-document.getElementById("detail").innerHTML = `
-  <img src="${data.poster}">
-  <h2>${data.title}</h2>
-  <p>${data.year} • ${data.type}</p>
-  <a class="download" href="${data.link}">Download</a>
-`;
-</script>
-
+  <footer class="footer">
+    &copy; 2025 StreamHub. For educational/demo use only.
+  </footer>
 </body>
-</html>
+    </html>
