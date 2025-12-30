@@ -1,0 +1,117 @@
+/* Reset & Base */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+  line-height: 1.5;
+}
+
+/* Layout */
+.header {
+  padding: 1rem 1.5rem;
+  background: #1e293b;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.header h1 { font-size: 1.5rem; font-weight: 700; }
+.back-link { text-decoration: none; color: #94a3b8; }
+
+nav { display: flex; gap: 1rem; }
+.tab {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  color: #94a3b8;
+}
+.tab.active, .tab:hover {
+  background: #334155;
+  color: #e2e8f0;
+}
+
+/* Banner Ad */
+.banner-ad {
+  padding: 0.75rem;
+  background: #1e293b;
+  text-align: center;
+}
+.ad-placeholder {
+  display: inline-block;
+  background: #334155;
+  color: #94a3b8;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+/* Grid Cards */
+.content { padding: 1rem; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1.25rem;
+}
+.card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+}
+.card h3 { margin-top: 0.5rem; font-size: 1rem; }
+.meta { color: #94a3b8; font-size: 0.85rem; }
+
+/* Tab Content Toggle */
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+/* Detail Page */
+.detail-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+@media (min-width: 768px) {
+  .detail-content { flex-direction: row; align-items: flex-start; }
+  .poster { flex: 0 0 300px; }
+  .info { flex: 1; }
+}
+.poster img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+}
+.info h2 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+.info .meta { color: #94a3b8; margin-bottom: 1rem; }
+.info .description {
+  margin-bottom: 1.5rem;
+  color: #cbd5e1;
+}
+.btn-download {
+  display: inline-block;
+  background: #3b82f6;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.btn-download:hover { background: #2563eb; }
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  color: #64748b;
+  font-size: 0.875rem;
+  border-top: 1px solid #1e293b;
+  margin-top: auto;
+                     }
